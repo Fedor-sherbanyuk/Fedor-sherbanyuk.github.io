@@ -1,0 +1,368 @@
+.container {
+    width: 1200px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2.5;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#jobLineMoney {
+    color: red;
+}
+
+/*Здесь начинаеться таблица table-cell*/
+.mapper {
+    width: 1200px;
+    text-align: center;
+    line-height: 2.5;
+    margin: 0 auto;
+    /*Честно не хотел писать padding, но без него так все некрасиво. Плюс padding был в разборе полетов д/з был отступ.*/
+    padding: 50px;
+}
+
+.line_800 {
+    width: 800px;
+    display: table-cell;
+}
+
+.line_700 {
+    width: 700px;
+    display: table-cell;
+}
+
+.line_500 {
+    width: 500px;
+    display: table-cell;
+}
+
+.line_400 {
+    width: 400px;
+    display: table-cell;
+}
+
+.line_300 {
+    width: 300px;
+    display: table-cell;
+}
+
+.outline_solid {
+    outline: 1px solid coral;
+    font-size: 25px;
+}
+
+/*Здесь начинаеться таблица inline-block*/
+/*В принципе можно и в mapper засунуть font-size: 0;, но сказали на лекции что должно его там не быть.*/
+.content_block {
+    font-size: 0;
+}
+
+.line_800_inline_block {
+    width: 800px;
+    display: inline-block;
+}
+
+.line_700_inline_block {
+    width: 700px;
+    display: inline-block;
+}
+
+.line_500_inline_block {
+    width: 500px;
+    display: inline-block;
+}
+
+.line_400_inline_block {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.line_300_inline_block {
+    width: 300px;
+    display: inline-block;
+}
+
+.outline_solid_parent {
+    outline: 1px solid coral;
+    font-size: 0;
+}
+
+.font_size_parent {
+    font-size: 0;
+}
+
+/*Здесь начинаеться таблица float*/
+
+.line_400_float_block {
+    width: 400px;
+    float: right;
+}
+
+.line_800_float_block {
+    width: 800px;
+    float: right;
+}
+
+.line_700_float_block {
+    width: 700px;
+    float: right;
+}
+
+.line_500_float_block {
+    width: 500px;
+    float: right;
+}
+
+.line_300_float_block {
+    width: 300px;
+    float: right;
+}
+
+/*Чем смелее художник, тем полнее краски в жизни это к тому что изменил цвет на морской*/
+.outline_solid_float {
+    outline: 1px solid aquamarine;
+    font-size: 15px;
+}
+
+.supporter {
+    clear: right;
+}
+
+/*Здесь начинаеться таблица float-style*/
+/*Захотелось оливок*/
+.outline_solid_float_style {
+    outline: 1px solid olivedrab;
+    font-size: 15px;
+}
+
+.clearfix:after {
+    content: "";
+    clear: right;
+    display: block;
+}
+
+/*Здесь начинаеться таблица flex*/
+/*Захотелось новенького*/
+.outline_solid_flex {
+    outline: 1px solid indigo;
+    font-size: 15px;
+}
+
+.line_800_flex_block {
+    flex: 0 1 800px;
+}
+
+.line_700_flex_block {
+    flex: 0 1 700px;
+}
+
+.line_500_flex_block {
+    flex: 0 1 500px;
+}
+
+.line_400_flex_block {
+    flex: 0 1 400px;
+}
+
+.line_300_flex_block {
+    flex: 0 1 300px;
+}
+
+.flex_block {
+    display: flex;
+}
+
+/*Здесь начинаеться grid-style*/
+/*Захотелось новенького*/
+.grid_parent_3_columns_auto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*можно было и без fr, но так круче смотрится.*/
+.grid_parent_2_columns_2fr_and_1fr {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+}
+
+/*можно было и с auto, но так круче смотрится.*/
+.grid_parent_2_columns_700_and_500 {
+    display: grid;
+    grid-template-columns:700px 500px;
+}
+
+/*можно было и с auto, но так круче смотрится.*/
+.grid_parent_2_columns_300_and_400 {
+    display: grid;
+    grid-template-columns:300px 400px;
+}
+
+.grid_parent_2_columns_auto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.outline_solid_grid {
+    outline: 1px solid violet;
+    font-size: 15px;
+}
+
+/*Здесь начинаеться grid-area*/
+/*Захотелось новенького*/
+.sheet {
+    width: 1200px;
+    text-align: center;
+    line-height: 2.5;
+    margin: 0 auto;
+    /*Честно без padding так все некрасиво.*/
+    padding: 50px;
+    display: grid;
+    grid-template-areas:
+    "A A B B C"
+    "D D D D E"
+    "F F F F G"
+    "F F F F H"
+    "I I I J J"
+    "K L L J J"
+    "M M M M N"
+    "O O P P N"
+    "Q Q P P N";
+}
+
+.outline_solid_grid_area {
+    outline: 1px solid gold;
+    font-size: 15px;
+}
+
+.grid_children_a {
+    grid-area: A;
+}
+
+.grid_children_b {
+    grid-area: B;
+}
+
+.grid_children_c {
+    grid-area: C;
+}
+
+.grid_children_d {
+    grid-area: D;
+}
+
+.grid_children_e {
+    grid-area: E;
+}
+
+.grid_children_f {
+    grid-area: F;
+}
+
+.grid_children_g {
+    grid-area: G;
+}
+
+.grid_children_h {
+    grid-area: H;
+}
+
+.grid_children_i {
+    grid-area: I;
+}
+
+.grid_children_j {
+    grid-area: J;
+}
+
+.grid_children_k {
+    grid-area: K;
+}
+
+.grid_children_l {
+    grid-area: L;
+}
+
+.grid_children_m {
+    grid-area: M;
+}
+
+.grid_children_n {
+    grid-area: N;
+}
+
+.grid_children_o {
+    grid-area: O;
+}
+
+.grid_children_p {
+    grid-area: P;
+}
+
+.grid_children_q {
+    grid-area: Q;
+}
+
+/*Здесь начинаются таблички в gallery*/
+.container_gallery {
+    width: 1200px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2.5;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.parent_title_gallery {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+}
+
+.title_photo {
+    position: absolute;
+    outline: 2px solid cadetblue;
+    font-size: 20px;
+    top: 50%;
+    margin-top: -25px;
+    width: 100%;
+}
+
+/*Здесь начинаются табличка в gallery впритул зліва до екрану*/
+.table_photo_gallery {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    margin-top: -245px;
+    font-size: 0;
+    outline: 2px solid green;
+    padding: 10px;
+    line-height: 2.5;
+    font-weight: 500;
+}
+
+.table_photo_gallery_block {
+    font-size: 12px;
+    outline: 2px solid blue;
+    margin-bottom: 10px;
+}
+/*Для красоты!*/
+.table_photo_gallery_block_last {
+    font-size: 12px;
+    outline: 2px solid blue;
+}
