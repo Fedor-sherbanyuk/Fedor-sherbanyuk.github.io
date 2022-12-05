@@ -5,6 +5,7 @@
     line-height: 2.5;
     font-weight: 500;
     margin: 0 auto;
+    padding: 5px;
 }
 
 h1 {
@@ -326,6 +327,7 @@ h3 {
     line-height: 2.5;
     font-weight: 500;
     margin: 0 auto;
+    padding: 5px;
 }
 
 .parent_title_gallery {
@@ -361,8 +363,119 @@ h3 {
     outline: 2px solid blue;
     margin-bottom: 10px;
 }
+
 /*Для красоты!*/
 .table_photo_gallery_block_last {
     font-size: 12px;
     outline: 2px solid blue;
+}
+
+/*Задание на побудувати багаторівневе меню згідно схеми, наданої на уроці.*/
+.ul_parent_level_1 {
+    font-size: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+.list_level_1 {
+    display: inline-block;
+    font-size: 20px;
+    outline: 1px solid blue;
+    background: gray;
+}
+
+.list_level_1_block {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    outline: 1px solid blue;
+    background: gray;
+}
+
+.list_level_1_a {
+    text-decoration: none;
+    color: orange;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    display: block;
+}
+
+ul li:hover {
+    background: green;
+}
+
+.ul_parent_level_2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    font-size: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.list_level_2 {
+    font-size: 20px;
+    outline: 1px solid blue;
+}
+
+.list_level_2_float_or_grid {
+    font-size: 20px;
+    position: relative;
+    outline: 1px solid blue;
+}
+
+.list_level_2_a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    display: block;
+}
+
+/*Мне так проще.*/
+ul li:hover .ul_parent_level_2 {
+    display: block;
+    background: yellow;
+}
+
+.ul_parent_level_3_float {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.ul_parent_level_3_grid {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    display: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.list_level_3 {
+    font-size: 20px;
+    outline: 1px solid blue;
+}
+
+.list_level_3_a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    display: block;
+}
+
+.list_level_2_float_or_grid:hover .ul_parent_level_3_grid {
+    display: block;
+    background: dodgerblue;
+}
+
+.list_level_2_float_or_grid:hover .ul_parent_level_3_float {
+    display: block;
+    background: palevioletred;
 }

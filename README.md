@@ -7,3 +7,5 @@
 - Простая страница [посмотрите сами grid-area](https://Fedor-sherbanyuk.github.io/grid-area/)
 - Это сраница с использует display: grid and  grid-template-areas
 - Используется outline: 1px solid gold;
+
+- Простая страница [посмотрите сами grid-area](https://fedor-sherbanyuk.github.io/gallery/)
