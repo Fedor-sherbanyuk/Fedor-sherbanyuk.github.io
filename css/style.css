@@ -358,16 +358,12 @@ h3 {
     font-weight: 500;
 }
 
-.table_photo_gallery_block {
+/*Спасибо за подсказку. */
+.table_photo_gallery > a {
     font-size: 12px;
     outline: 2px solid blue;
     margin-bottom: 10px;
-}
-
-/*Для красоты!*/
-.table_photo_gallery_block_last {
-    font-size: 12px;
-    outline: 2px solid blue;
+    display: block;
 }
 
 /*Задание на побудувати багаторівневе меню згідно схеми, наданої на уроці.*/
@@ -380,26 +376,75 @@ h3 {
 .list_level_1 {
     display: inline-block;
     font-size: 20px;
-    outline: 1px solid blue;
+    border: 1px solid blue;
     background: gray;
 }
 
 .list_level_1_block {
     display: inline-block;
     font-size: 20px;
-    position: relative;
-    outline: 1px solid blue;
+    border: 1px solid blue;
     background: gray;
+    position: relative;
 }
 
 .list_level_1_a {
     text-decoration: none;
     color: orange;
     text-transform: uppercase;
-    padding: 20px 30px;
+    padding: 20px 5px 20px 65px;
     display: block;
+    position: relative;
 }
 
+.list_level_1_a_arrow_down {
+    color: orange;
+    text-transform: uppercase;
+    padding: 20px 65px 20px 5px;
+    display: block;
+    position: relative;
+}
+
+.list_level_1_a:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 0;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.list_level_1_a_arrow_down:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -1020px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*hover*/
+ul :hover .list_level_1_a:before {
+    background-position: 0 -60px;
+}
+
+ul :hover .list_level_1_a_arrow_down:before {
+    background-position: 0 -960px;
+}
+
+ul li ul > li:hover .list_level_2_a_float_arrow:before {
+    background-position: 0 -840px;
+}
+
+ul li ul > li:hover .list_level_2_a_grid_arrow:before {
+    background-position: 0 -720px;
+}
+
+/*Конец*/
 ul li:hover {
     background: green;
 }
@@ -416,21 +461,59 @@ ul li:hover {
 
 .list_level_2 {
     font-size: 20px;
-    outline: 1px solid blue;
+    border: 1px solid blue;
 }
 
 .list_level_2_float_or_grid {
     font-size: 20px;
     position: relative;
-    outline: 1px solid blue;
+    border: 1px solid blue;
 }
 
 .list_level_2_a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    padding: 20px 30px;
+    padding: 30px 38px;
     display: block;
+}
+
+.list_level_2_a_float_arrow {
+    color: black;
+    text-transform: uppercase;
+    padding: 20px 65px 19px 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.list_level_2_a_grid_arrow {
+    color: black;
+    text-transform: uppercase;
+    padding: 20px 5px 19px 65px;
+    display: block;
+    position: relative;
+}
+
+.list_level_2_a_float_arrow:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -900px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.list_level_2_a_grid_arrow:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -780px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /*Мне так проще.*/
@@ -459,15 +542,16 @@ ul li:hover .ul_parent_level_2 {
 
 .list_level_3 {
     font-size: 20px;
-    outline: 1px solid blue;
+    border: 1px solid blue;
 }
 
 .list_level_3_a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 20px 30px;
+    padding: 20px 5px 19px 65px;
     display: block;
+    position: relative;
 }
 
 .list_level_2_float_or_grid:hover .ul_parent_level_3_grid {
@@ -478,4 +562,61 @@ ul li:hover .ul_parent_level_2 {
 .list_level_2_float_or_grid:hover .ul_parent_level_3_float {
     display: block;
     background: palevioletred;
+}
+
+/*Спрайты внизу*/
+.social_sprites {
+    font-size: 0;
+    text-align: right;
+    background: white;
+    padding: 50px 0;
+}
+
+.social_sprites li {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.social_sprites li a {
+    background: url('../images/social_sprites.png') 0 -120px;
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.social_sprites li + li a {
+    background-position: 0 -540px;
+}
+
+.social_sprites li + li + li a {
+    background-position: 0 -360px;
+}
+
+.social_sprites li + li + li + li a {
+    background-position: 0 -660px;
+}
+
+.social_sprites li + li + li + li + li a {
+    background-position: 0 -240px;
+}
+
+/*hover*/
+.social_sprites li:hover a {
+    background-position: 0 -180px;
+}
+
+.social_sprites li + li:hover a {
+    background-position: 0 -480px;
+}
+
+.social_sprites li + li + li:hover a {
+    background-position: 0 -420px;
+}
+
+.social_sprites li + li + li + li:hover a {
+    background-position: 0 -600px;
+}
+
+.social_sprites li + li + li + li + li:hover a {
+    background-position: 0 -300px;
 }
