@@ -410,7 +410,6 @@ h3 {
     width: 60px;
     height: 60px;
     background: url('../images/social_sprites.png') 0 0;
-    display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
@@ -421,7 +420,6 @@ h3 {
     width: 60px;
     height: 60px;
     background: url('../images/social_sprites.png') 0 -1020px;
-    display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
@@ -451,12 +449,21 @@ ul li:hover {
 
 .ul_parent_level_2 {
     position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
     font-size: 0;
     text-align: center;
     z-index: 5;
+    top: -5000%;
+    left: -5000%;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(.5, .01, .03, .69) 0.3s;
+}
+
+/*Мне так проще.*/
+ul li:hover .ul_parent_level_2 {
+    top: 100%;
+    left: 0;
+    background: yellow;
+    pointer-events: all;
 }
 
 .list_level_2 {
@@ -499,7 +506,6 @@ ul li:hover {
     width: 60px;
     height: 60px;
     background: url('../images/social_sprites.png') 0 -900px;
-    display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
@@ -510,34 +516,33 @@ ul li:hover {
     width: 60px;
     height: 60px;
     background: url('../images/social_sprites.png') 0 -780px;
-    display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/*Мне так проще.*/
-ul li:hover .ul_parent_level_2 {
-    display: block;
-    background: yellow;
-}
-
 .ul_parent_level_3_float {
     position: absolute;
     left: 100%;
-    top: 0;
-    display: none;
+    top: -3%;
     font-size: 0;
     text-align: center;
+    width: 0;
+    overflow: hidden;
+    background: aqua;
+    transition: all 1.5s cubic-bezier(0, 1.45, 0, 1.7);
 }
 
 .ul_parent_level_3_grid {
     position: absolute;
     right: 100%;
-    bottom: 0;
-    display: none;
+    top: -158%;
     font-size: 0;
-    text-align: center;
+    text-align: left;
+    width: 0;
+    overflow: hidden;
+    background: aqua;
+    transition: all 1.5s cubic-bezier(0, 1.45, 0, 1.7);
 }
 
 .list_level_3 {
@@ -549,19 +554,21 @@ ul li:hover .ul_parent_level_2 {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 20px 5px 19px 65px;
+    padding: 35px 65px 19px 5px;
     display: block;
     position: relative;
 }
 
 .list_level_2_float_or_grid:hover .ul_parent_level_3_grid {
-    display: block;
-    background: dodgerblue;
+    background: tomato;
+    overflow: visible;
+    width: 100%;
 }
 
 .list_level_2_float_or_grid:hover .ul_parent_level_3_float {
-    display: block;
     background: palevioletred;
+    overflow: visible;
+    width: 100%;
 }
 
 /*Спрайты внизу*/
