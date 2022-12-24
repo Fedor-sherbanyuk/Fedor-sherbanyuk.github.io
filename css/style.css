@@ -443,7 +443,7 @@ ul li ul > li:hover .list_level_2_a_grid_arrow:before {
 }
 
 /*Конец*/
-ul li:hover {
+.ul_parent_level_1 li:hover {
     background: green;
 }
 
@@ -626,4 +626,158 @@ ul li:hover .ul_parent_level_2 {
 
 .social_sprites li + li + li + li + li:hover a {
     background-position: 0 -300px;
+}
+
+/*New DZ table*/
+.new_table_div {
+    display: inline-block;
+    line-height: 2.5;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    background: coral;
+    position: fixed;
+    top: 50%;
+    right: -175px;
+    padding: 50px 27px 50px 90px;
+    animation: mymove 3s;
+    animation-iteration-count: 1;
+    transform: translateY(-50%);
+    transition: all 1s ease;
+}
+
+.new_table_text {
+    transform: translateY(-50%) rotate(270deg);
+    position: absolute;
+    top: 50%;
+    left: -60px;
+}
+
+.new_table_div:hover {
+    right: 0;
+    transition:all 2s cubic-bezier(0, 1.41, 0, 1.37);
+}
+
+@keyframes mymove {
+    from {
+        top: 50%;
+    }
+    to {
+        top: 70%;
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+}
+
+.div_social_sprites_new {
+    text-align: center;
+    background:linear-gradient(blue,aqua);
+    transform: rotate(45deg);
+}
+
+.flex_block_2 {
+    display: flex;
+}
+
+.flex_block div {
+    font-size: 24px;
+        overflow: hidden;
+}
+
+.flex_block_2 div{
+    display: flex;
+    overflow: hidden;
+}
+
+.flex_block div a {
+    background: url('../images/social_sprites.png') 0 -120px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+
+.flex_block div a:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -120px;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 0;
+    left: 0;
+}
+
+.flex_block div + div a {
+    background-position: 0 -540px;
+    transform: rotate(45deg);
+}
+
+.flex_block div + div a:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -540px;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 0;
+    left: 0;
+}
+
+.flex_block_2 div a {
+    background: url('../images/social_sprites.png') 0 -360px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+
+.flex_block_2 div a:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -360px;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 0;
+    left: 0;
+}
+
+.flex_block_2 div + div a {
+    background-position: 0 -660px;
+    transform: rotate(45deg);
+}
+
+.flex_block_2 div + div a:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url('../images/social_sprites.png') 0 -660px;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 0;
+    left: 0;
+}
+
+.flex_block a:hover:before {
+    background-position: 0 -180px;
+}
+
+.flex_block div+div a:hover:before {
+    background-position: 0 -480px;
+}
+
+.flex_block_2 a:hover:before {
+    background-position: 0 -420px;
+}
+
+.flex_block_2 div+div a:hover:before {
+    background-position: 0 -600px;
 }
