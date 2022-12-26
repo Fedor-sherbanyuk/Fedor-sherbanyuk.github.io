@@ -341,8 +341,16 @@ h3 {
     outline: 2px solid cadetblue;
     font-size: 20px;
     top: 50%;
-    margin-top: -25px;
     width: 100%;
+    transform: translateY(-50%);
+    background: rgba(117, 190, 218, 0.5);
+}
+
+/*//можно и 90deg*/
+.title_photo_text {
+    background: linear-gradient(to right, blue, aqua);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 /*Здесь начинаются табличка в gallery впритул зліва до екрану*/
@@ -350,7 +358,7 @@ h3 {
     position: fixed;
     left: 0;
     top: 50%;
-    margin-top: -245px;
+    transform: translateY(-50%);
     font-size: 0;
     outline: 2px solid green;
     padding: 10px;
@@ -575,8 +583,8 @@ ul li:hover .ul_parent_level_2 {
 .social_sprites {
     font-size: 0;
     text-align: right;
-    background: white;
-    padding: 50px 0;
+    background: lime;
+    display: inline-block;
 }
 
 .social_sprites li {
@@ -656,7 +664,7 @@ ul li:hover .ul_parent_level_2 {
 
 .new_table_div:hover {
     right: 0;
-    transition:all 2s cubic-bezier(0, 1.41, 0, 1.37);
+    transition: all 2s cubic-bezier(0, 1.41, 0, 1.37);
 }
 
 @keyframes mymove {
@@ -676,7 +684,7 @@ ul li:hover .ul_parent_level_2 {
 
 .div_social_sprites_new {
     text-align: center;
-    background:linear-gradient(blue,aqua);
+    background: linear-gradient(blue, aqua);
     transform: rotate(45deg);
 }
 
@@ -686,10 +694,10 @@ ul li:hover .ul_parent_level_2 {
 
 .flex_block div {
     font-size: 24px;
-        overflow: hidden;
+    overflow: hidden;
 }
 
-.flex_block_2 div{
+.flex_block_2 div {
     display: flex;
     overflow: hidden;
 }
@@ -770,7 +778,7 @@ ul li:hover .ul_parent_level_2 {
     background-position: 0 -180px;
 }
 
-.flex_block div+div a:hover:before {
+.flex_block div + div a:hover:before {
     background-position: 0 -480px;
 }
 
@@ -778,6 +786,36 @@ ul li:hover .ul_parent_level_2 {
     background-position: 0 -420px;
 }
 
-.flex_block_2 div+div a:hover:before {
+.flex_block_2 div + div a:hover:before {
     background-position: 0 -600px;
+}
+
+/*DZ 15*/
+body {
+    background: lime;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+body:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-height: 55vh;
+    min-width: 55%;
+    background: radial-gradient(farthest-corner at 0 0, lime 67%, rgba(255, 0, 255, 0.5) 67%);
+    z-index: -5;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-height: 55vh;
+    min-width: 55%;
+    background: radial-gradient(farthest-corner at 100% 0, lime 68%, rgba(139, 0, 139, 0.5) 68%);
+    z-index: -5;
 }
